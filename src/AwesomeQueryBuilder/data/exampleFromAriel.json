@@ -1,0 +1,40 @@
+{
+  "Expression": {
+    "Positive": [
+      {
+        "Domains": {
+          "Names": ["yahoo.com", "aol.com"],
+          "Groups": ["Yahoo", "Gmail"]
+        },
+        "DateOfBirth": "> 65y",
+        "Gender": "m",
+        "HealthcareSurvey": ["NoInsurance", "Bla"],
+        "Signal": [
+          {
+            "Attributors": ["Onpoint"],
+            "RecordTypes": ["Lead"],
+            "Seen": "BETWEEN 10d AND 12d"
+          },
+          {
+            "Attributors": ["XVerify", "EmailOversight"],
+            "RecordTypes": ["Verified"],
+            "Seen": ">= 30d"
+          }
+        ]
+      }
+    ],
+    "Negative": [
+      {
+        "Signal": [
+          {
+            "SignalGroup": "Tier1 Suppression"
+          },
+          {
+            "RecordTypes": "MailBounce",
+            "Seen": "< 90d"
+          }
+        ]
+      }
+    ]
+  }
+}

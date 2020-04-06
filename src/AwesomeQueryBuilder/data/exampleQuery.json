@@ -1,0 +1,194 @@
+{
+  "type": "group",
+  "id": "9a99988a-0123-4456-b89a-b1607f326fd8",
+  "children1": {
+    "8aa9888b-cdef-4012-b456-7171377a45db": {
+      "type": "rule_group",
+      "properties": {
+        "conjunction": "AND",
+        "field": "Domains"
+      },
+      "children1": {
+        "9898a898-89ab-4cde-b012-3171377a513f": {
+          "type": "rule",
+          "properties": {
+            "field": "Domains.Groups",
+            "operator": "multiselect_equals",
+            "value": [
+              [
+                "Gmail",
+                "AOL"
+              ]
+            ],
+            "valueSrc": [
+              "value"
+            ],
+            "valueType": [
+              "multiselect"
+            ]
+          }
+        },
+        "8ab8b99a-4567-489a-bcde-f171377a76e6": {
+          "type": "rule",
+          "properties": {
+            "field": "Domains.Names",
+            "operator": "multiselect_equals",
+            "value": [
+              [
+                "gmail.com",
+                "aol.com"
+              ]
+            ],
+            "valueSrc": [
+              "value"
+            ],
+            "valueType": [
+              "multiselect"
+            ]
+          }
+        }
+      }
+    },
+    "b99aa8bb-0123-4456-b89a-b1713b29914d": {
+      "type": "rule",
+      "properties": {
+        "field": "HealthcareSurvey",
+        "operator": "multiselect_equals",
+        "value": [
+          [
+            "BCBS",
+            "UHC"
+          ]
+        ],
+        "valueSrc": [
+          "value"
+        ],
+        "valueType": [
+          "multiselect"
+        ]
+      }
+    },
+    "a8b9a8a9-0123-4456-b89a-b171377a9b5f": {
+      "type": "rule",
+      "properties": {
+        "field": "Gender",
+        "operator": "select_equals",
+        "value": [
+          "Female"
+        ],
+        "valueSrc": [
+          "value"
+        ],
+        "valueType": [
+          "select"
+        ]
+      }
+    },
+    "999ababb-4567-489a-bcde-f1713af79a29": {
+      "type": "rule_group",
+      "properties": {
+        "conjunction": "AND",
+        "field": "Signal"
+      },
+      "children1": {
+        "a8babb8b-0123-4456-b89a-b1713af7b6af": {
+          "type": "rule",
+          "properties": {
+            "field": "Signal.Attributors",
+            "operator": "multiselect_equals",
+            "value": [
+              [
+                "XVerify"
+              ]
+            ],
+            "valueSrc": [
+              "value"
+            ],
+            "valueType": [
+              "multiselect"
+            ]
+          }
+        },
+        "8a899bbb-cdef-4012-b456-71713af7d51d": {
+          "type": "rule",
+          "properties": {
+            "field": "Signal.RecordTypes",
+            "operator": "multiselect_equals",
+            "value": [
+              [
+                "Verified"
+              ]
+            ],
+            "valueSrc": [
+              "value"
+            ],
+            "valueType": [
+              "multiselect"
+            ]
+          }
+        },
+        "b9aba999-cdef-4012-b456-71713b26edab": {
+          "type": "rule",
+          "properties": {
+            "field": "Signal.Seen.Days",
+            "operator": "greater",
+            "value": [
+              5
+            ],
+            "valueSrc": [
+              "value"
+            ],
+            "valueType": [
+              "number"
+            ]
+          }
+        },
+        "988a889b-89ab-4cde-b012-31713b272983": {
+          "type": "rule",
+          "properties": {
+            "field": "Signal.Seen.Days",
+            "operator": "less_or_equal",
+            "value": [
+              30
+            ],
+            "valueSrc": [
+              "value"
+            ],
+            "valueType": [
+              "number"
+            ]
+          }
+        }
+      }
+    },
+    "b98b8998-cdef-4012-b456-71713b3bef53": {
+      "type": "group",
+      "properties": {
+        "conjunction": "AND",
+        "not": true
+      },
+      "children1": {
+        "889bb9bb-89ab-4cde-b012-31713b3bef54": {
+          "type": "rule",
+          "properties": {
+            "field": "SignalGroup",
+            "operator": "select_equals",
+            "value": [
+              "Tier1 Suppression"
+            ],
+            "valueSrc": [
+              "value"
+            ],
+            "valueType": [
+              "select"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "properties": {
+    "conjunction": "AND",
+    "not": false
+  }
+}
